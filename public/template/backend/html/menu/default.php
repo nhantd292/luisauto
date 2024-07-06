@@ -131,24 +131,24 @@
                 </a>
             </li>
 
-            <li class="dropdown-submenu">
-                <a href="javascript:;" target="_self">
-                    <i class="fa fa-folder-o"></i> <span class="title">Zalo</span><span class="arrow"></span>
-                </a>
-                <ul class="dropdown-menu" style="display: none;">
-                    <li>
-                        <a href="<?php echo $this->url('routeAdmin/default', array('controller' => 'zalo-notify-config', 'action' => 'index'));?>" target="_self">
-                            <i class="fa fa-cog"></i> <span class="title">Cấu hình thông báo</span><span class="arrow"></span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="<?php echo $this->url('routeAdmin/default', array('controller' => 'zalo-notify-result', 'action' => 'index'));?>" target="_self">
-                            <i class="fa fa-cog"></i> <span class="title">Kết quả gửi thông báo</span><span class="arrow"></span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+<!--            <li class="dropdown-submenu">-->
+<!--                <a href="javascript:;" target="_self">-->
+<!--                    <i class="fa fa-folder-o"></i> <span class="title">Zalo</span><span class="arrow"></span>-->
+<!--                </a>-->
+<!--                <ul class="dropdown-menu" style="display: none;">-->
+<!--                    <li>-->
+<!--                        <a href="--><?php //echo $this->url('routeAdmin/default', array('controller' => 'zalo-notify-config', 'action' => 'index'));?><!--" target="_self">-->
+<!--                            <i class="fa fa-cog"></i> <span class="title">Cấu hình thông báo</span><span class="arrow"></span>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!---->
+<!--                    <li>-->
+<!--                        <a href="--><?php //echo $this->url('routeAdmin/default', array('controller' => 'zalo-notify-result', 'action' => 'index'));?><!--" target="_self">-->
+<!--                            <i class="fa fa-cog"></i> <span class="title">Kết quả gửi thông báo</span><span class="arrow"></span>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </li>-->
 
             <?php if($curent_user['id'] = '1111111111111111111111'){?>
             <li>
