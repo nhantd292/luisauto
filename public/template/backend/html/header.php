@@ -24,5 +24,5 @@
     <link href="<?php echo $this->arrParams['template']['urlCss'];?>/themes/default.css" media="screen" rel="stylesheet" type="text/css">
     <link href="<?php echo $this->arrParams['template']['urlCss'];?>/custom.css?v=<?php echo date('dmYHis');?>" media="screen" rel="stylesheet" type="text/css">
 
-    <link href="<?php echo $this->arrParams['template']['urlImg'];?>/favicon.jpg" rel="icon" type="image/x-icon">
+    <link href="<?php echo $this->arrParams['template']['urlImg'];?>/favicon.png" rel="icon" type="image/x-icon">
 </head>
