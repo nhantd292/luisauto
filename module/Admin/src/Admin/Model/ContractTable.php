@@ -122,6 +122,10 @@ class ContractTable extends DefaultTable {
                     $select -> where -> equalTo(TABLE_CONTRACT .'.production_type_id', $ssFilter['filter_production_type_id']);
                 }
 
+                if(!empty($ssFilter['filter_type_contact'])) {
+                    $select -> where -> equalTo(TABLE_CONTACT .'.type', $ssFilter['filter_type_contact']);
+                }
+
                 if(!empty($ssFilter['filter_product'])) {
                     foreach($ssFilter['filter_product'] as $key => $value){
                         $select -> where -> like(TABLE_CONTRACT .'.options', '%'.$value.'%');
@@ -713,6 +717,10 @@ class ContractTable extends DefaultTable {
     			if(!empty($ssFilter['filter_production_type_id'])) {
     			    $select -> where -> equalTo(TABLE_CONTRACT .'.production_type_id', $ssFilter['filter_production_type_id']);
     			}
+
+                if(!empty($ssFilter['filter_type_contact'])) {
+                    $select -> where -> equalTo(TABLE_CONTACT .'.type', $ssFilter['filter_type_contact']);
+                }
 
                 if(!empty($ssFilter['filter_user'])) {
 //                    $select -> where -> equalTo(TABLE_CONTRACT .'.user_id', $ssFilter['filter_user']);

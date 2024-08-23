@@ -48,6 +48,7 @@ class ContractController extends ActionController {
         $this->_params['ssFilter']['filter_care_status']    = $ssFilter->filter_care_status;
         $this->_params['ssFilter']['filter_marketer_status']= $ssFilter->filter_marketer_status;
         $this->_params['ssFilter']['filter_marketer_id']    = $ssFilter->filter_marketer_id;
+        $this->_params['ssFilter']['filter_type_contact']   = $ssFilter->filter_type_contact;
 
         // Thiết lập lại thông số phân trang
         $this->_paginator['itemCountPerPage'] = !empty($ssFilter->pagination_option) ? $ssFilter->pagination_option : $this->_paginator['itemCountPerPage'];
@@ -96,6 +97,7 @@ class ContractController extends ActionController {
             $ssFilter->filter_care_status 	    = $data['filter_care_status'];
             $ssFilter->filter_marketer_status 	= $data['filter_marketer_status'];
             $ssFilter->filter_marketer_id 	    = $data['filter_marketer_id'];
+            $ssFilter->filter_type_contact 	    = $data['filter_type_contact'];
 
             $ssFilter->filter_sale_group = $data['filter_sale_group'];
             if(!empty($data['filter_sale_branch'])) {

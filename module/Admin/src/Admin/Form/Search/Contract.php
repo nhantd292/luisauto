@@ -369,6 +369,21 @@ class Contract extends Form{
                 'value_options'	=> \ZendX\Functions\CreateArray::create($sm->getServiceLocator()->get('Admin\Model\UserTable')->listItem(array('company_department_id' => 'marketing'), array('task' => 'list-user-department')), array('key' => 'id', 'value' => 'name')),
             )
         ));
+
+        $this->add(array(
+            'name'			=> 'filter_type_contact',
+            'type'			=> 'Select',
+            'attributes'	=> array(
+                'class'		=> 'form-control select2 select2_basic',
+            ),
+            'options'		=> array(
+                'empty_option'  => '- Loại KH -',
+                'disable_inarray_validator' => true,
+                'value_options'	=> \ZendX\Functions\CreateArray::create($sm->getServiceLocator()->get('Admin\Model\DocumentTable')->listItem(array( "where" => array( "code" => "sale-contact-type" )), array('task' => 'cache-public')), array('key' => 'alias', 'value' => 'name')),
+            )
+        ));
+
+
 		
 		// Submit
 		$this->add(array(
