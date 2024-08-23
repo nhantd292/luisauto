@@ -5,8 +5,22 @@ use \Zend\Form\Form as Form;
 class Contract extends Form{ 
     
 	public function __construct($sm, $params = null){
+        $caregories_forewin = Array(
+            '438730' => 'Forewin - Thảm Sàn Nhựa Đúc Ôtô',
+            '467240' => 'Forewin - Thảm Rối Cabon Ô tô',
+            '759124' => 'Forewin - Thảm Sàn Ô tô 5D,6D',
+            '759469' => 'Forewin - Thảm Cốp 5D,6D',
+            '759766' => 'Forewin - Đồ Chơi và Chăm Sóc',
+            '764874' => 'Forewin - Thảm Sàn Ô tô 5D,6D Full Body',
+            '790109' => 'Forewin - Thảm Rối Cước Full Sàn'
+        );
+
+
 	    $action   = $params['action'];
 	    $ssFilter = $params['ssFilter'];
+	    foreach($caregories_forewin as $key => $value){
+            $params['categories'][$key] = $value;
+	    }
 	    $categories = $params['categories'];
 	    $products = $params['products'];
 		parent::__construct();
