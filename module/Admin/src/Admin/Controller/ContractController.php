@@ -2900,6 +2900,10 @@ class ContractController extends ActionController {
                                                     $pro['name']        = $value['full_name'].' - '.$value['car_year'];;
                                                     $pro['code']        = $value['code'];
                                                     $pro['quantity']    = $value['numbers'];
+                                                    $pro['weight']      = $value['weight']*1000;
+                                                    $pro['length']      = (int)$value['length'];
+                                                    $pro['width']       = (int)$value['width'];
+                                                    $pro['height']      = (int)$value['height'];
 
                                                     $products[] = $pro;
                                                 }
@@ -2908,6 +2912,10 @@ class ContractController extends ActionController {
                                                 $pro['name']        = $value['full_name'].' - '.$value['car_year'];;
                                                 $pro['code']        = $value['code'];
                                                 $pro['quantity']    = $value['numbers'];
+                                                $pro['weight']      = (int)$value['weight']*1000;
+                                                $pro['length']      = (int)$value['length'];
+                                                $pro['width']       = (int)$value['width'];
+                                                $pro['height']      = (int)$value['height'];
 
                                                 $products[] = $pro;
                                                 break;
@@ -2917,6 +2925,10 @@ class ContractController extends ActionController {
                                             $pro['name']        = $value['full_name'].' - '.$value['car_year'];;
                                             $pro['code']        = $value['code'];
                                             $pro['quantity']    = $value['numbers'];
+                                            $pro['weight']      = (int)$value['weight']*1000;
+                                            $pro['length']      = (int)$value['length'];
+                                            $pro['width']       = (int)$value['width'];
+                                            $pro['height']      = (int)$value['height'];
 
                                             $products[] = $pro;
                                             break;
