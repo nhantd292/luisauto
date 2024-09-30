@@ -968,7 +968,7 @@ class ApiController extends ActionController {
                     }
                     if(!empty($contract_item)){
                         // Tạo hóa đơn kov trừ số lượng hàng trong kho
-                        if($data['Status'] == 'picked'){ // trạng thái Đã lấy hàng/Đã nhập kho trên ghtk
+                        if(($data['Status'] == 'picked' || $data['Status'] == 'storing') && empty($contract_item['shipped_date'])){ // trạng thái Đã lấy hàng/Đã nhập kho trên ghtk
                             $this->updateNumberKiotviet($contract_item);
                         }
                         if($data['Status'] == 'delivered' && empty($contract_item['date_success'])) {
