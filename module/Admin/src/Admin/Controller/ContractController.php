@@ -2963,7 +2963,8 @@ class ContractController extends ActionController {
                                     $order_item["client_order_code"] = $contract['code']; // Mã đơn hàng crm
                                     $order_item["to_name"] = $contract['name']; // Người nhận
                                     $order_item["to_phone"] = $contract['phone']; // Điện thoại nhận
-                                    $order_item["to_address"] = $locations[$contract['location_city_id']]->name; // Địa chỉ nhận
+                                    // $order_item["to_address"] = $locations[$contract['location_city_id']]->name; // Địa chỉ nhận
+                                    $order_item["to_address"] = $contract['address']; // Địa chỉ nhận
                                     $order_item["to_ward_name"] = $locations[$contract['location_town_id']]->fullname; // Phường/xã nhận
                                     $order_item["to_district_name"] = $locations[$contract['location_district_id']]->fullname; // Quận/huyện nhận
                                     $order_item["to_province_name"] = $locations[$contract['location_city_id']]->name; // Tỉnh/Thành nhận
