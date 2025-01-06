@@ -56,11 +56,12 @@ class ContractTable extends DefaultTable {
                     $date_type = $ssFilter['filter_date_type'];
                 }
                 if($date_type == 'not_shipped'){
-                    $select -> where -> NEST
-                        -> isNull(TABLE_CONTRACT .'.shipped_date')
-                        ->OR
-                        -> equalTo(TABLE_CONTRACT .'.shipped_date', '')
-                        -> UNNEST;
+//                    $select -> where -> NEST
+//                        -> isNull(TABLE_CONTRACT .'.shipped_date')
+//                        ->OR
+//                        -> equalTo(TABLE_CONTRACT .'.shipped_date', '')
+//                        -> UNNEST;
+                    $select -> where -> isNull(TABLE_CONTRACT .'.shipped_date');
                 }
                 else {
                     if (!empty($ssFilter['filter_date_begin']) && !empty($ssFilter['filter_date_end'])) {
@@ -261,11 +262,12 @@ class ContractTable extends DefaultTable {
                     $date_type = $ssFilter['filter_date_type'];
                 }
                 if($date_type == 'not_shipped'){
-                    $select -> where -> NEST
-                        -> isNull(TABLE_CONTRACT .'.shipped_date')
-                        ->OR
-                        -> equalTo(TABLE_CONTRACT .'.shipped_date', '')
-                        -> UNNEST;
+//                    $select -> where -> NEST
+//                        -> isNull(TABLE_CONTRACT .'.shipped_date')
+//                        ->OR
+//                        -> equalTo(TABLE_CONTRACT .'.shipped_date', '')
+//                        -> UNNEST;
+                    $select -> where -> isNull(TABLE_CONTRACT .'.shipped_date');
                 }
                 else {
                     if (!empty($ssFilter['filter_date_begin']) && !empty($ssFilter['filter_date_end'])) {
@@ -683,11 +685,12 @@ class ContractTable extends DefaultTable {
                     $date_type = $ssFilter['filter_date_type'];
                 }
                 if($date_type == 'not_shipped'){
-                    $select -> where -> NEST
-                        -> isNull(TABLE_CONTRACT .'.shipped_date')
-                        ->OR
-                        -> equalTo(TABLE_CONTRACT .'.shipped_date', '')
-                        -> UNNEST;
+//                    $select -> where -> NEST
+//                        -> isNull(TABLE_CONTRACT .'.shipped_date')
+//                        ->OR
+//                        -> equalTo(TABLE_CONTRACT .'.shipped_date', '')
+//                        -> UNNEST;
+                    $select -> where -> isNull(TABLE_CONTRACT .'.shipped_date');
                 }
                 else{
                     if(!empty($ssFilter['filter_date_begin']) && !empty($ssFilter['filter_date_end'])) {
@@ -1157,11 +1160,12 @@ class ContractTable extends DefaultTable {
                     $select -> where -> equalTo(TABLE_CONTRACT .'.sale_branch_id', $ssFilter['filter_sale_branch']);
                 }
 //                $select -> where -> equalTo(TABLE_CONTRACT .'.status_id', 'da-chot');
-                $select -> where-> NEST
-                    -> EqualTo(TABLE_CONTRACT .'.shipped_date', '')
-                    ->Or
-                    -> isNull( TABLE_CONTRACT .'.shipped_date')
-                    -> UNNEST;
+//                $select -> where-> NEST
+//                    -> EqualTo(TABLE_CONTRACT .'.shipped_date', '')
+//                    ->Or
+//                    -> isNull( TABLE_CONTRACT .'.shipped_date')
+//                    -> UNNEST;
+                $select -> where -> isNull(TABLE_CONTRACT .'.shipped_date');
             });
         }
 
@@ -1215,11 +1219,12 @@ class ContractTable extends DefaultTable {
                     $date_type = $ssFilter['filter_date_type'];
                 }
                 if($date_type == 'not_shipped'){
-                    $select -> where -> NEST
-                        -> isNull(TABLE_CONTRACT .'.shipped_date')
-                        ->OR
-                        -> equalTo(TABLE_CONTRACT .'.shipped_date', '')
-                        -> UNNEST;
+//                    $select -> where -> NEST
+//                        -> isNull(TABLE_CONTRACT .'.shipped_date')
+//                        ->OR
+//                        -> equalTo(TABLE_CONTRACT .'.shipped_date', '')
+//                        -> UNNEST;
+                    $select -> where -> isNull(TABLE_CONTRACT .'.shipped_date');
                 }
                 else{
                     if(!empty($ssFilter['filter_date_begin']) && !empty($ssFilter['filter_date_end'])) {
